@@ -4,7 +4,7 @@ body {
     margin: 0;
     padding: 0;
     font-family: 'Poppins', sans-serif;
-    color: #1e1e2a;
+    color: #232730;
 }
 
 /** HEADER */
@@ -12,7 +12,7 @@ body {
 .header-container {
     height: 100vh;
     width: 100vw;
-    background-color: #60e1e0;
+    background-color: #F5f2b8;
     background-image: url(./images/Ylan_fundo.png);
     background-repeat: no-repeat;
     background-position: right;
@@ -44,9 +44,9 @@ h2 {
 
 .social-media a {
     text-decoration: none;
-    color: #1e1e2a;
+    color: #232730;
     padding: 1rem 4rem;
-    border: 2px solid #1e1e2a;
+    border: 2px solid #232730;
     min-width: 1rem;
     display: flex;
     align-items: center;
@@ -55,7 +55,7 @@ h2 {
 }
 
 a:hover {
-    background-color: #ffffff;
+    background-color: #494a4c;
 }
 
 /*! MENU HAMBURGUER */
@@ -82,7 +82,7 @@ a:hover {
 .checkbox .trace {
     width: 50px;
     height: 2px;
-    background-color: #1e1e2a;
+    background-color: #232730;
     position: absolute;
     border-radius: 4px;
     transition: 0.5s ease-in-out;
@@ -117,7 +117,7 @@ a:hover {
     height: 5px;
     width: 10px;
     border-radius: 50%;
-    box-shadow: 0px 0px 0px 0px #ffffff;
+    box-shadow: 0px 0px 0px 0px #494a4c;
     z-index: -1;
     transition: 400ms ease-in-out 0s;
 }
@@ -143,7 +143,7 @@ a:hover {
 
 .menu-items ul li a {
     margin: 10px 0;
-    color: #1e1e2a;
+    color: #232730;
     text-decoration: none;
     text-transform: uppercase;
     letter-spacing: 4px;
@@ -170,11 +170,11 @@ a:hover {
 }
 
 #toggle:checked + .checkbox {
-    background-color: #ffffff;
+    background-color: #494a4c;
 }
 
 #toggle:checked ~ .menu {
-    box-shadow: 0px 0px 0px 100vmax #ffffff;
+    box-shadow: 0px 0px 0px 100vmax #494a4c;
     z-index: 1;
 }
 
@@ -209,17 +209,85 @@ a:hover {
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: #60e1e0;
+    background-color: #F5f2b8;
     background-image: url(./images/Ylan_fundo.png);
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
     filter: grayscale(0.5);
-    color: #1e1e2a;
+    color: #232730;
     cursor: pointer;
     transition: 0.5s ease-in-out;
 }
 
 .card-text {
-    /** O VIDEO ESTA EM 27:57 NA LISTA PROGRAMAÇAO */
+    width: 50%;
+    letter-spacing: 1px;
+    color: rgb(109, 109, 109);
+}
+
+.card-wrapper {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.card-wrapper::before {
+    content: '';
+    position: absolute;
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+    display: block;
+    border: 1px solid #494a4c;
+    opacity: 0;
+    transition: 0.5s ease-in-out;
+}
+
+.card-wrapper h2 {
+    font-size: 40px;
+    text-transform: uppercase;
+    letter-spacing: 4 px;
+    margin: 0;
+    transition: 0.5s ease-in-out;
+}
+
+.card-wrapper p {
+    font-size: 0;
+    visibility: visible;
+    opacity: 0;
+    font-weight: bold;
+    text-transform: uppercase;
+    transition: 0.5s ease-in-out;
+}
+
+.card:hover {
+    filter: unset;
+}
+
+.card:hover > .card-wrapper::before {
+    height: 195px;
+    width: 195px;
+    opacity: 1;
+}
+
+.card:hover > .card-wrapper p {
+    opacity: 1;
+    visibility: visible;
+    font-size: 15px;
+}
+
+/*! FOOTER*/
+
+.footer {
+    width: 100%;
+    height: 60px;
+    background-color: #F5f2b8;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #232730;
 }
